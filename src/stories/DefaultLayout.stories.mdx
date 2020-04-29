@@ -1,0 +1,78 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { Grid, Row, Column } from "../components/grid";
+import { Box } from "../components/box";
+import theme from "../theme";
+import { PageTitleBreadcrumbs } from "../components/pagetitle";
+
+<Meta title="Layout/Default" component={Grid} />
+
+# Default Layout
+
+<Preview>
+  <Story name="default">
+    <div style={{ backgroundColor: theme.colors.lights[1]}}>
+      <Grid>
+        <Row>
+          <Column margin={[0, 0, 1.25]} >
+            <Box>Something</Box>
+          </Column>
+        </Row>
+        <Row>
+          <Column margin={[0, 1.25, 1.25]} >
+           <PageTitleBreadcrumbs 
+            title="Page Heading" 
+            list={[
+              { label: "Home", uri: `#` },
+              { label: "Hosts", uri: `#` },
+              { label: "Host Details", uri: `#` }
+            ]}
+            />
+          </Column>
+        </Row>
+        <Row>
+          <Column margin={[0, 1.25, 1.25]} >
+            <Box></Box>
+          </Column>
+        </Row>
+      </Grid>
+      </div>
+  </Story>
+</Preview>
+
+# Sidebar Layout
+
+<Preview>
+  <Story name="sidebar">
+    <div style={{ backgroundColor: theme.colors.lights[1]}}>
+      <Grid>
+        <Row>
+          <Column margin={[0, 0, 1.25]} >
+            <Box>Something</Box>
+          </Column>
+        </Row>
+        <Row>
+          <Column size={3}></Column>
+          <Column>
+            <Row>
+              <Column margin={[0, 1.25, 1.25]} >
+              <PageTitleBreadcrumbs 
+                title="Page Heading" 
+                list={[
+                  { label: "Home", uri: `#` },
+                  { label: "Hosts", uri: `#` },
+                  { label: "Host Details", uri: `#` }
+                ]}
+                />
+              </Column>
+            </Row>
+            <Row>
+              <Column margin={[0, 1.25, 1.25]} >
+                <Box></Box>
+              </Column>
+            </Row>
+              </Column>
+            </Row>
+      </Grid>
+      </div>
+  </Story>
+</Preview>

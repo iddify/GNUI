@@ -10,7 +10,7 @@ interface PageTitleProps {
   title: string;
 }
 
-interface PageTitleBreadcrumbsProps {
+export interface PageTitleBreadcrumbsProps {
   title: string;
   list: Array<BreadcrumbsList>;
   margin?: string;
